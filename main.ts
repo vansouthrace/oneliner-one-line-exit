@@ -1,6 +1,5 @@
-import fs from 'node:fs';
-import path from 'node:path';
-const entry = 'I resign effective immediately; the office plant died in 2023 and nobody noticed, which honestly sums up my whole tenure here.';
-const outDir = '/output';
-fs.mkdirSync(outDir, { recursive: true });
-fs.writeFileSync(path.join(outDir, 'entry.txt'), entry, 'utf8');
+import { mkdirSync, writeFileSync } from "node:fs";
+
+// Entry: one line, 138 chars, under the 140-char gate.
+mkdirSync("/output", { recursive: true });
+writeFileSync("/output/entry.txt", "I hereby resign, effective immediately, because the printer has jammed for the last time and I refuse to be the only adult in this office.");
